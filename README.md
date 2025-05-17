@@ -1,12 +1,10 @@
-- 👋 Hi, I’m @srimanchintu
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+import openai
 
-<!---
-srimanchintu/srimanchintu is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+openai.api_key = api_key
+
+response = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+    messages=[{"role": "user", "content": "Hello, ChatGPT!"}]
+)
+
+print(response['choices'][0]['message']['content'])
