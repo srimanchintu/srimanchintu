@@ -10,3 +10,6 @@ response = openai.ChatCompletion.create(
 print(response['choices'][0]['message']['content'])
 
  ## i have done it api integration by using python
+
+#OUTPUT
+[Hello! How can I assist you today ? ]
